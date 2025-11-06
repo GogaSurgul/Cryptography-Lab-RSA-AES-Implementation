@@ -1,0 +1,102 @@
+
+nano rsa_vs_aes.txt
+
+
+RSA is an asymmetric encryption algorithm — slower, but secure for key exchange.  
+AES is a symmetric encryption algorithm — fast and ideal for encrypting large files.  
+Both are used together in HTTPS as a hybrid encryption system.
+
+
+xxd -p aes_key.bin | tr -d '\n' > aes_key.hex
+xxd -p aes_iv.bin | tr -d '\n' > aes_iv.hex
+
+
+
+
+openssl enc -aes-256-cbc \
+-K "$(cat aes_key.hex)" -iv "$(cat aes_iv.hex)" \
+-in message.txt -out message_aes_encrypted.bin
+
+
+openssl enc -d -aes-256-cbc \
+-K "$(cat aes_key.hex)" -iv "$(cat aes_iv.hex)" \
+-in message_aes_encrypted.bin -out message_aes_decrypted.txt
+
+
+
+cat message_aes_decrypted.txt
+
+
+
+xxd -p aes_key.bin | tr -d '\n' | tr -d ' ' > aes_key.hex
+xxd -p aes_iv.bin  | tr -d '\n' | tr -d ' ' > aes_iv.hex
+
+
+
+cat aes_key.hex
+cat aes_iv.hex
+
+
+
+
+cat aes_key.hex
+cat aes_iv.hex
+
+
+
+openssl enc -aes-256-cbc \
+-K "$(cat aes_key.hex)" -iv "$(cat aes_iv.hex)" \
+-in message.txt -out message_aes_encrypted.bin
+
+
+openssl enc -d -aes-256-cbc \
+-K "$(cat aes_key.hex)" -iv "$(cat aes_iv.hex)" \
+-in message_aes_encrypted.bin -out message_aes_decrypted.txt
+
+
+cat message_aes_decrypted.txt
+
+
+Hello from Goga’s crypto lab 👋
+
+
+
+cd ~/week4
+git init
+git add .
+git commit -m "Week 4 Crypto Lab completed"
+git branch -M main
+git remote add origin https://github.com/GogaSurgul/Crypto_Week4_Goga.git
+git push -u origin main
+
+
+
+
+
+
+cd ~/week4
+git init
+git add .
+git commit -m "Week 4 Crypto Lab completed"
+git branch -M main
+git remote add origin https://github.com/GogaSurgul/Cryptography-Lab-RSA-AES-Implementation.git
+git push -u origin main
+
+
+git --version
+
+
+
+
+git remote -v
+
+
+
+pwd
+
+
+which git
+
+
+
+

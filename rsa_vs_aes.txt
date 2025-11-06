@@ -1,0 +1,11 @@
+
+nano rsa_vs_aes.txt
+
+
+RSA is an asymmetric encryption algorithm — slower, but secure for key exchange.  
+AES is a symmetric encryption algorithm — fast and ideal for encrypting large files.  
+Both are used together in HTTPS as a hybrid encryption system.
+
+
+
+
