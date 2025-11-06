@@ -1,0 +1,1 @@
+TLS traffic successfully captured and analyzed in Wireshark. The trace includes TCP 443 packets with TLS handshake and encrypted Application Data. This demonstrates HTTPS encryption using symmetric AES keys established through asymmetric TLS handshake.
